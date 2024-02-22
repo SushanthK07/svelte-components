@@ -1,4 +1,5 @@
 <script>
+  import { setContext } from "svelte";
   import Greet from "./components/Greet.svelte";
 
   const name = "Modi";
@@ -8,6 +9,8 @@
     name: "Virat Kohli",
     superHeroName: "GOAT",
   };
+
+  setContext("user-info", { name: "Anonymous" });
 </script>
 
 <main>

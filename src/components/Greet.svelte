@@ -1,4 +1,6 @@
 <script>
+  import UserName from "./UserName.svelte";
+
   export let name = "Sushanth";
   export let superHeroName = "Superman";
 </script>
@@ -11,4 +13,6 @@
   <b>
     {superHeroName}
   </b>
+  by
+  <UserName />
 </p>
