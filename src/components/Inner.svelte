@@ -9,4 +9,7 @@
   };
 </script>
 
-<button on:click={greet}>Greet</button>
+<!-- <button on:click={greet}>Greet</button> -->
+
+<!-- event forwarding works for browser DOM events too -->
+<Button on:click={greet} />
