@@ -6,6 +6,7 @@
   import Card from "./components/Card.svelte";
   import Button from "./components/Button.svelte";
   import Names from "./components/Names.svelte";
+  import ChildStyles from "./components/ChildStyles.svelte";
 
   const name = "Modi";
   const superHeroName = "Prime Minister of India";
@@ -66,7 +67,7 @@
     </div>
   </Card>
   <Card /> -->
-  <Names>
+  <!-- <Names>
     <h4 slot="hero" let:firstName let:lastName>{firstName} {lastName}</h4>
   </Names>
   <Names>
@@ -74,8 +75,19 @@
   </Names>
   <Names>
     <h4 slot="hero" let:firstName>{firstName}</h4>
-  </Names>
+  </Names> -->
+
+  <h3>App component global style</h3>
+  <h4>App component local style</h4>
+  <ChildStyles />
 </main>
 
 <style>
+  :global(h3) {
+    color: red;
+  }
+
+  h4 {
+    color: orange;
+  }
 </style>
