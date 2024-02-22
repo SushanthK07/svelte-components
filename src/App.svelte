@@ -2,6 +2,7 @@
   import { setContext } from "svelte";
   import Greet from "./components/Greet.svelte";
   import Popup from "./components/Popup.svelte";
+  import Outer from "./components/Outer.svelte";
 
   const name = "Modi";
   const superHeroName = "Prime Minister of India";
@@ -24,6 +25,10 @@
     }
     showPopup = false;
   }
+
+  const greetHandler = (event) => {
+    alert(event.detail);
+  };
 </script>
 
 <main>
@@ -36,6 +41,8 @@
   {#if showPopup}
     <Popup onClose={handlePopupClose} on:close={handlePopupClose} />
   {/if}
+  <br />
+  <Outer on:greet={greetHandler} />
 </main>
 
 <style>
