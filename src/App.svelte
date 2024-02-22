@@ -5,6 +5,7 @@
   import Outer from "./components/Outer.svelte";
   import Card from "./components/Card.svelte";
   import Button from "./components/Button.svelte";
+  import Names from "./components/Names.svelte";
 
   const name = "Modi";
   const superHeroName = "Prime Minister of India";
@@ -34,17 +35,17 @@
 </script>
 
 <main>
-  <Greet superHeroName="HanuMan" />
+  <!-- <Greet superHeroName="HanuMan" />
   <Greet name="Phaneendra" superHeroName="IronMan" />
   <Greet name="Krishna" />
   <Greet {name} {superHeroName} />
-  <Greet {...person} />
-  <button on:click={handlePopupOpen}>Open Popup</button>
+  <Greet {...person} /> -->
+  <!-- <button on:click={handlePopupOpen}>Open Popup</button>
   {#if showPopup}
     <Popup onClose={handlePopupClose} on:close={handlePopupClose} />
-  {/if}
-  <br />
-  <Outer on:greet={greetHandler} />
+  {/if} -->
+  <!-- <br /> -->
+  <!-- <Outer on:greet={greetHandler} /> -->
   <!-- <Card />
   <Card>Card Content</Card>
   <Card>
@@ -53,7 +54,7 @@
   <Card>
     <img src="https://picsum.photos/300" alt />
   </Card> -->
-  <Card>
+  <!-- <Card>
     <div slot="header">
       <h2>Header</h2>
     </div>
@@ -64,7 +65,16 @@
       <Button>View More</Button>
     </div>
   </Card>
-  <Card />
+  <Card /> -->
+  <Names>
+    <h4 slot="hero" let:firstName let:lastName>{firstName} {lastName}</h4>
+  </Names>
+  <Names>
+    <h4 slot="hero" let:firstName let:lastName>{lastName} {firstName}</h4>
+  </Names>
+  <Names>
+    <h4 slot="hero" let:firstName>{firstName}</h4>
+  </Names>
 </main>
 
 <style>
