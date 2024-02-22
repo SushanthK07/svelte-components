@@ -3,6 +3,7 @@
   import Greet from "./components/Greet.svelte";
   import Popup from "./components/Popup.svelte";
   import Outer from "./components/Outer.svelte";
+  import Card from "./components/Card.svelte";
 
   const name = "Modi";
   const superHeroName = "Prime Minister of India";
@@ -43,6 +44,14 @@
   {/if}
   <br />
   <Outer on:greet={greetHandler} />
+  <Card />
+  <Card>Card Content</Card>
+  <Card>
+    <h3>Card Content</h3>
+  </Card>
+  <Card>
+    <img src="https://picsum.photos/300" alt />
+  </Card>
 </main>
 
 <style>
