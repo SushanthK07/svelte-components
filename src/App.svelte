@@ -8,6 +8,7 @@
   import Names from "./components/Names.svelte";
   import ChildStyles from "./components/ChildStyles.svelte";
   import PostList from "./components/PostList.svelte";
+  import AutoFocus from "./components/AutoFocus.svelte";
 
   const name = "Modi";
   const superHeroName = "Prime Minister of India";
@@ -82,7 +83,9 @@
   <h4>App component local style</h4>
   <ChildStyles /> -->
 
-  <PostList />
+  <!-- <PostList /> -->
+
+  <AutoFocus />
 </main>
 
 <style>
