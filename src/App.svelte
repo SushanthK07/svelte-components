@@ -9,6 +9,7 @@
   import ChildStyles from "./components/ChildStyles.svelte";
   import PostList from "./components/PostList.svelte";
   import AutoFocus from "./components/AutoFocus.svelte";
+  import Dynamic from "./components/Dynamic.svelte";
 
   const name = "Modi";
   const superHeroName = "Prime Minister of India";
@@ -85,7 +86,9 @@
 
   <!-- <PostList /> -->
 
-  <AutoFocus />
+  <!-- <AutoFocus /> -->
+
+  <Dynamic />
 </main>
 
 <style>
