@@ -7,6 +7,7 @@
   import Button from "./components/Button.svelte";
   import Names from "./components/Names.svelte";
   import ChildStyles from "./components/ChildStyles.svelte";
+  import PostList from "./components/PostList.svelte";
 
   const name = "Modi";
   const superHeroName = "Prime Minister of India";
@@ -77,17 +78,19 @@
     <h4 slot="hero" let:firstName>{firstName}</h4>
   </Names> -->
 
-  <h3>App component global style</h3>
+  <!-- <h3>App component global style</h3>
   <h4>App component local style</h4>
-  <ChildStyles />
+  <ChildStyles /> -->
+
+  <PostList />
 </main>
 
 <style>
-  :global(h3) {
+  /* :global(h3) {
     color: red;
-  }
+  } */
 
-  h4 {
+  /* h4 {
     color: orange;
-  }
+  } */
 </style>
