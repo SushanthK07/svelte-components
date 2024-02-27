@@ -3,10 +3,10 @@
   import TabB from "./TabB.svelte";
   import TabC from "./TabC.svelte";
 
-  let mainTab = "A";
+  let activeTab = TabA;
 
   function handleTabChange(tab) {
-    mainTab = tab;
+    activeTab = tab;
   }
 </script>
 
@@ -14,31 +14,38 @@
   <h2>Dynamic Component</h2>
   <div>
     <button
-      class={mainTab === "A" ? "border" : ""}
-      on:click={() => handleTabChange("A")}
+      class={activeTab === TabA ? "border" : ""}
+      on:click={() => handleTabChange(TabA)}
     >
       Tab A
     </button>
     <button
-      class={mainTab === "B" ? "border" : ""}
-      on:click={() => handleTabChange("B")}
+      class={activeTab === TabB ? "border" : ""}
+      on:click={() => handleTabChange(TabB)}
     >
       Tab B
     </button>
     <button
-      class={mainTab === "C" ? "border" : ""}
-      on:click={() => handleTabChange("C")}
+      class={activeTab === TabC ? "border" : ""}
+      on:click={() => handleTabChange(TabC)}
     >
       Tab C
     </button>
   </div>
-  {#if mainTab === "A"}
+
+  <!-- {#if activeTab === "A"}
     <TabA />
-  {:else if mainTab === "B"}
+  {:else if activeTab === "B"}
     <TabB />
-  {:else if mainTab === "C"}
+  {:else if activeTab === "C"}
     <TabC />
-  {/if}
+  {/if} -->
+
+  <!--
+    svelte specific html tag 'svelte:component'
+    role: renders the svelte component dynamically by setting this attribute
+  -->
+  <svelte:component this={activeTab} />
 </main>
 
 <style>
