@@ -10,6 +10,7 @@
   import PostList from "./components/PostList.svelte";
   import AutoFocus from "./components/AutoFocus.svelte";
   import Dynamic from "./components/Dynamic.svelte";
+  import Counter, { getTotalCount } from "./components/Counter.svelte";
 
   const name = "Modi";
   const superHeroName = "Prime Minister of India";
@@ -88,7 +89,14 @@
 
   <!-- <AutoFocus /> -->
 
-  <Dynamic />
+  <!-- <Dynamic /> -->
+
+  <!-- why this is not working? -> variables defined in the module scripts are not reactive -->
+  <!-- <h3>Total Count: {getTotalCount()}</h3> -->
+  <button on:click={() => alert(getTotalCount())}>Get Total Count</button>
+  <Counter />
+  <Counter />
+  <Counter />
 </main>
 
 <style>
